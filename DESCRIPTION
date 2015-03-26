@@ -1,0 +1,16 @@
+Package: tracker
+Type: Package
+Version: 0.0.0
+Title: Time tracker and non sampling profiler tools
+Description: Time tracker and non sampling profiler tools
+Authors@R: c(
+    person("Romain", "Francois", , "romain@r-enthusiasts.com", role = c("aut", "cre") )
+    )
+URL: https://github.com/romainfrancois/tracker
+BugReports: https://github.com/romainfrancois/tracker/issues
+Depends:
+    R (>= 3.0.2)
+Imports:
+    Rcpp, RcppParallel
+LinkingTo: Rcpp, RcppParallel
+License: MIT + file LICENSE
