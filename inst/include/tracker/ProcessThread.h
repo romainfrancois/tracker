@@ -1,15 +1,8 @@
-#ifndef TRACKER_PROCESSTHREADS_H
-#define TRACKER_PROCESSTHREADS_H
+#ifndef TRACKER_PROCESSTHREAD_H
+#define TRACKER_PROCESSTHREAD_H
 
 namespace tracker {
        
-    template <typename T>
-    void process_fun( void* void_arg ){
-        T* arg = reinterpret_cast<T*>(void_arg) ;
-        arg->process() ;
-        delete arg ;
-    }
-    
     template <typename T>
     class ProcessThread {
     public:
@@ -23,9 +16,13 @@ namespace tracker {
             t->join() ;    
         }
         
+        ~ProcessThread(){
+            delete t ;    
+        }
+        
     private:
         thread* t ;
-        process_thread( const process_thread& ) ;
+        ProcessThread( const ProcessThread& ) ;
     } ;
     
 }

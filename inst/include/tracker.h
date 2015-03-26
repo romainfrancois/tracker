@@ -4,6 +4,8 @@
 #include <Rcpp.h>
 #include <RcppParallel.h>
 
+#include <tracker/process_fun.h>
 #include <tracker/ProcessThread.h>
+#include <tracker/ProcessThreads.h>
 
 #endif
