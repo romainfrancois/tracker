@@ -17,7 +17,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // test_ProcessThreadsPool
-IntegerVector test_ProcessThreadsPool();
+NumericVector test_ProcessThreadsPool();
 RcppExport SEXP tracker_test_ProcessThreadsPool() {
 BEGIN_RCPP
     Rcpp::RObject __result;
