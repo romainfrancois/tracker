@@ -6,13 +6,23 @@
 
 using namespace Rcpp;
 
-// test_tracker
-IntegerVector test_tracker();
-RcppExport SEXP tracker_test_tracker() {
+// test_ProcessThreads
+IntegerVector test_ProcessThreads();
+RcppExport SEXP tracker_test_ProcessThreads() {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
-    __result = Rcpp::wrap(test_tracker());
+    __result = Rcpp::wrap(test_ProcessThreads());
+    return __result;
+END_RCPP
+}
+// test_ProcessThreadsPool
+IntegerVector test_ProcessThreadsPool();
+RcppExport SEXP tracker_test_ProcessThreadsPool() {
+BEGIN_RCPP
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    __result = Rcpp::wrap(test_ProcessThreadsPool());
     return __result;
 END_RCPP
 }

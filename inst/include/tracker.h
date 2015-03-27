@@ -7,5 +7,6 @@
 #include <tracker/process_fun.h>
 #include <tracker/ProcessThread.h>
 #include <tracker/ProcessThreads.h>
+#include <tracker/ProcessThreadsPool.h>
 
 #endif

@@ -16,13 +16,30 @@ struct test_tracker_data {
 } ;
 
 // [[Rcpp::export]]
-IntegerVector test_tracker(){
+IntegerVector test_ProcessThreads(){
     
     // allocate some data
     IntegerVector res = no_init(4) ;
     
     // fill it in 4 threads
     ProcessThreads<test_tracker_data> threads  ;
+    for(int i=0; i<4; i++){
+        threads.add( new test_tracker_data( res[i], i) ) ;    
+    }
+    threads.join_all() ;
+    
+    return res ;
+    
+}
+
+// [[Rcpp::export]]
+IntegerVector test_ProcessThreadsPool(){
+    
+    // allocate some data
+    IntegerVector res = no_init(4) ;
+    
+    // fill it in 4 threads
+    ProcessThreadsPool<test_tracker_data> threads(2)  ;
     for(int i=0; i<4; i++){
         threads.add( new test_tracker_data( res[i], i) ) ;    
     }
