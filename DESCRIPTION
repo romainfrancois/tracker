@@ -14,3 +14,4 @@ Imports:
     Rcpp, RcppParallel
 LinkingTo: Rcpp, RcppParallel
 License: MIT + file LICENSE
+SystemRequirements: C++11
